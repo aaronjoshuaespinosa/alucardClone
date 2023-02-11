@@ -1,9 +1,14 @@
+import { Footer, Hero, History, Tokenomics, Util } from './components/index';
 import './index.css';
 
 function App() {
   return (
     <>
-      <main></main>
+      <Hero />
+      <Util />
+      <History />
+      <Tokenomics />
+      <Footer />
     </>
   );
 }
