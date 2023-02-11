@@ -68,17 +68,17 @@ const Util = () => {
             {cards.map((card, i) => (
               <motion.div
                 initial={{
-                    opacity: 0,
-                    y: i % 2 === 0 ? -400 : 400,
-                  }}
+                  opacity: 0,
+                  y: i % 2 === 0 ? -400 : 400,
+                }}
                 animate={{
-                    opacity: 1,
-                    y: 0,
-                    transition: {
-                      duration: 0.8,
-                      ease: "easeInOut",
-                    }
-                  }}
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    duration: 0.8,
+                    ease: "easeInOut",
+                  }
+                }}
 
                 className='basis-1 lg:basis-1/3' style={i === 0 ? { marginTop: '0rem' } : i === 1 ? { marginTop: '1rem' } : i === 2 ? { marginTop: '2rem' } : null} key={card.id}>
                 <div className='bg-red h-[18rem]'>
