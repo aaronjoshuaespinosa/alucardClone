@@ -47,13 +47,13 @@ const History = () => {
   
   return (
     <>
-      <section className='bg-none text-white w-full h-auto lg:h-[80vh] relative flex justify-center py-20'>
+      <section className='bg-none text-white w-full h-auto relative flex justify-center py-20 lg:py-40'>
         <div className='z-10 max-w-[80rem] w-[85%] mx-0 lg:mx-10 h-full flex flex-col lg:flex-row items-center justify-center'>
           <div className='z-50 flex w-[50%] justify-center items-center'>
             <motion.img variants={animateCharacter} initial="initial" animate="animate" className='w-auto lg:w-[50%]' src="https://ik.imagekit.io/xzgmktvzg/hero2.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1676100600918" />
           </div>
 
-          <div className='z-50 flex flex-col w-full lg:w-[50%] justify-center'>
+          <div className='z-50 flex flex-col w-full md:-[60%] lg:w-[50%] h-auto justify-center'>
             <motion.h1 variants={animateTitle} initial="initial" animate="animate" className='font-sora font-[900] text-[2.3rem] lg:text-[3rem]'>THE HISTORY</motion.h1>
             <motion.p variants={animateDesc} initial="initial" animate="animate" className='color-secondary font-inter font-[100] text-[10px] lg:text-[12px] tracking-[3px] leading-[24px] lg:leading-[28px]'>ALUCARD IS THE CENTRAL CHARACTER AND MAIN ANTAGONIST OF THE HELLSING ANIME SERIES. HE IS A POWERFUL VAMPIRE AND MARTIAL ARTIST, WHO SERVES SIR INTEGRA FAIRBROOK WINGATES HELLSING, THE LEADER OF THE HELLSING ORGANIZATION, WHO SPECIALIZES IN PROTECTING THE BRITISH EMPIRE FROM SUPERNATURAL THREATS. ALUCARD WAS BORN IN THE EARLY 1400S AS VLAD TEPES, A RUTHLESS WARLORD IN WALLACHIA (NOW ROMANIA).
 

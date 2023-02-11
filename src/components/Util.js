@@ -54,7 +54,7 @@ const Util = () => {
   ]
   return (
     <>
-      <section className='bg-black text-white w-full h-auto lg:h-[80vh] relative flex justify-center'>
+      <section className='bg-black text-white w-full h-auto pt-5 pb-20 relative flex justify-center'>
         <div className='z-10 max-w-[80rem] w-[85%] mx-0 lg:mx-10 h-full flex flex-col lg:flex-row items-center justify-center'>
           {/* DESCRIPTION */}
           <div className='flex flex-col gap-y-[1rem]'>
@@ -64,7 +64,7 @@ const Util = () => {
           </div>
 
           {/* CARDS */}
-          <div className='flex flex-col lg:flex-row gap-x-[1rem] mx-[2rem] w-full lg:w-auto max-w-[55rem] pt-[3rem] lg:pt-0'>
+          <div className='flex flex-col md:flex-row lg:flex-row justify-center gap-x-[1rem] mx-[2rem] w-full md:w-full lg:w-auto lg:max-w-[55rem] pt-[3rem] lg:pt-0'>
             {cards.map((card, i) => (
               <motion.div
                 initial={{
@@ -80,9 +80,9 @@ const Util = () => {
                   }
                 }}
 
-                className='basis-1 lg:basis-1/3' style={i === 0 ? { marginTop: '0rem' } : i === 1 ? { marginTop: '1rem' } : i === 2 ? { marginTop: '2rem' } : null} key={card.id}>
-                <div className='bg-red h-[18rem]'>
-                  <img className='h-full object-cover' src={card.image} />
+                className='w-full' style={i === 0 ? { marginTop: '0rem' } : i === 1 ? { marginTop: '1rem' } : i === 2 ? { marginTop: '2rem' } : null} key={card.id}>
+                <div className='bg-red h-[15rem] md:h-[18rem] overflow-hidden flex'>
+                  <img alt="card" className='w-full md:h-full lg:h-full object-cover items-center' src={card.image} />
                 </div>
                 <div className='bg-card text-black p-[1.5rem]'>
                   <h1 className='font-sora font-[500] text-[1.23rem]'>{card.title}</h1>
