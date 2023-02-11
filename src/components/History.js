@@ -1,4 +1,5 @@
 import React from 'react'
+import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
 
 const History = () => {
@@ -7,7 +8,7 @@ const History = () => {
       y: 0,
     },
     animate: {
-      y: [0, -15, -30, -35, -40, -45, -50, -55, -60,  0],
+      y: [0, -15, -30, -35, -40, -45, -50, -55, -60, 0],
       transition: {
         duration: 5,
         repeat: Infinity,
@@ -44,7 +45,15 @@ const History = () => {
       }
     },
   }
-  
+
+  const options = {
+    triggerOnce: true,
+    thresold: 0.3
+  }
+
+  const [titleRef, titleView] = useInView(options)
+  const [descRef, descView] = useInView(options)
+
   return (
     <>
       <section className='bg-none text-white w-full h-auto relative flex justify-center py-20 lg:py-40'>
@@ -54,14 +63,16 @@ const History = () => {
           </div>
 
           <div className='z-50 flex flex-col w-full md:-[60%] lg:w-[50%] h-auto justify-center'>
-            <motion.h1 variants={animateTitle} initial="initial" animate="animate" className='font-sora font-[900] text-[2.3rem] lg:text-[3rem]'>THE HISTORY</motion.h1>
-            <motion.p variants={animateDesc} initial="initial" animate="animate" className='color-secondary font-inter font-[100] text-[10px] lg:text-[12px] tracking-[3px] leading-[24px] lg:leading-[28px]'>ALUCARD IS THE CENTRAL CHARACTER AND MAIN ANTAGONIST OF THE HELLSING ANIME SERIES. HE IS A POWERFUL VAMPIRE AND MARTIAL ARTIST, WHO SERVES SIR INTEGRA FAIRBROOK WINGATES HELLSING, THE LEADER OF THE HELLSING ORGANIZATION, WHO SPECIALIZES IN PROTECTING THE BRITISH EMPIRE FROM SUPERNATURAL THREATS. ALUCARD WAS BORN IN THE EARLY 1400S AS VLAD TEPES, A RUTHLESS WARLORD IN WALLACHIA (NOW ROMANIA).
+            <motion.h1 variants={animateTitle} initial="initial" ref={titleRef} animate={titleView ? "animate" : ""} className='font-sora font-[900] text-[2.3rem] lg:text-[3rem]'>THE HISTORY</motion.h1>
+            <motion.div variants={animateDesc} initial="initial" ref={descRef} animate={descView ? "animate" : ""} className='color-secondary font-inter font-[100] text-[10px] lg:text-[12px] tracking-[3px] leading-[24px] lg:leading-[28px] gap-y-2 flex flex-col'>
+              <p>ALUCARD IS THE CENTRAL CHARACTER AND MAIN ANTAGONIST OF THE HELLSING ANIME SERIES. HE IS A POWERFUL VAMPIRE AND MARTIAL ARTIST, WHO SERVES SIR INTEGRA FAIRBROOK WINGATES HELLSING, THE LEADER OF THE HELLSING ORGANIZATION, WHO SPECIALIZES IN PROTECTING THE BRITISH EMPIRE FROM SUPERNATURAL THREATS. ALUCARD WAS BORN IN THE EARLY 1400S AS VLAD TEPES, A RUTHLESS WARLORD IN WALLACHIA (NOW ROMANIA).</p>
 
-              HE WAS RENOWNED FOR HIS CRUELTY, WHICH WAS SO GREAT THAT, EVEN AFTER HIS DEATH, HIS NAME BECAME SYNONYMOUS WITH TERROR AND SADISM (HENCE ALUCARD, THE ANAGRAM OF HIS NAME).
+              <p>HE WAS RENOWNED FOR HIS CRUELTY, WHICH WAS SO GREAT THAT, EVEN AFTER HIS DEATH, HIS NAME BECAME SYNONYMOUS WITH TERROR AND SADISM (HENCE ALUCARD, THE ANAGRAM OF HIS NAME).</p>
 
-              HE WAS EVENTUALLY KILLED BY ABRAHAM VAN HELLSING, WHO THEN BOUND THE VAMPIRE’S SOUL TO AN IMMORTAL STATE. ALUCARD SUBSEQUENTLY BECAME THE HELLSING FAMILY’S LOYAL SERVANT, AND HAS PROTECTED THE BRITISH EMPIRE FROM NUMEROUS THREATS SINCE THEN.
+              <p>HE WAS EVENTUALLY KILLED BY ABRAHAM VAN HELLSING, WHO THEN BOUND THE VAMPIRE’S SOUL TO AN IMMORTAL STATE. ALUCARD SUBSEQUENTLY BECAME THE HELLSING FAMILY’S LOYAL SERVANT, AND HAS PROTECTED THE BRITISH EMPIRE FROM NUMEROUS THREATS SINCE THEN.</p>
 
-              HE IS IMMENSELY POWERFUL, ABLE TO CONTROL MINDS AND MANIPULATE REALITY, AND IS ALSO SHOWN TO BE HIGHLY SKILLED IN HAND-TO-HAND COMBAT AND SWORDSMANSHIP.</motion.p>
+              <p>HE IS IMMENSELY POWERFUL, ABLE TO CONTROL MINDS AND MANIPULATE REALITY, AND IS ALSO SHOWN TO BE HIGHLY SKILLED IN HAND-TO-HAND COMBAT AND SWORDSMANSHIP.</p>
+            </motion.div>
           </div>
 
           {/* GRADIENT TOP */}
