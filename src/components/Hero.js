@@ -65,7 +65,10 @@ const Hero = () => {
   return (
     <>
       <main className='bg-black text-white w-full h-screen relative flex justify-center'>
+        {/* BACKGROUND IMAGE */}
         <img alt='background of hero' className='w-full h-[100vh] lg:h-[84vh] absolute brightness-[40%] lg:brightness-[80%] object-cover object-right absolute-0' src="https://ik.imagekit.io/xzgmktvzg/bg2.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1676100601559" />
+        
+        {/* GRADIENT */}
         <div className='w-full h-[75vh] absolute bottom-0 lg:bottom-[8rem] bg-gradient-to-t from-black to-transparent'></div>
 
         <div className='z-10 max-w-[85rem] mx-0 lg:mx-10 h-full flex flex-col lg:flex-row items-center justify-center'>
