@@ -1,8 +1,13 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const Util = () => {
   return (
-    <div>Util</div>
+    <>
+      <section className='bg-black text-white w-full h-screen relative flex justify-center'>
+
+      </section>
+    </>
   )
 }
 

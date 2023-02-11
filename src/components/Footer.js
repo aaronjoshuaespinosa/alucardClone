@@ -2,7 +2,11 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <>
+      <section className='bg-black text-white w-full h-screen relative flex justify-center'>
+
+      </section>
+    </>
   )
 }
 
