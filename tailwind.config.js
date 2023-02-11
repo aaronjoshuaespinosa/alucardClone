@@ -7,6 +7,12 @@ module.exports = {
         'sora': ['Sora'],
         'quick': ['Quicksand'],
         'inter': ['Inter']
+      },
+
+      colors : {
+        'main': '#FFF',
+        'secondary': '#999',
+        'red': '#8a1208'
       }
     },
   },
