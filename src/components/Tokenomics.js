@@ -83,9 +83,9 @@ const Tokenomics = () => {
           </div>
 
           {/* IMAGE */}
-          <div className='flex items-center justify-center w-50 relative my-20'>
+          <div className='flex items-center justify-center w-full lg:w-50 relative my-20'>
             <motion.div variants={animateAccent} initial="initial" animate="animate" className='w-36 h-36 border-t-white border-t-[5px] border-l-white border-l-[5px] absolute top-[-1rem] left-[-1rem]'></motion.div>
-            <motion.img variants={animateImg} initial="initial" animate="animate" alt="alucard token" src="https://ik.imagekit.io/xzgmktvzg/3rd-1.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1676100600316" />
+            <motion.img variants={animateImg} initial="initial" animate="animate" alt="alucard token" className='w-full lg:w-50' src="https://ik.imagekit.io/xzgmktvzg/3rd-1.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1676100600316" />
           </div>
         </div>
       </section>
