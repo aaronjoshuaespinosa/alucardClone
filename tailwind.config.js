@@ -12,7 +12,8 @@ module.exports = {
       colors : {
         'main': '#FFF',
         'secondary': '#999',
-        'red': '#8a1208'
+        'red': '#8a1208',
+        'card': '#D0D2C4'
       }
     },
   },

@@ -73,7 +73,7 @@ const Hero = () => {
 
         <div className='z-10 max-w-[85rem] mx-0 lg:mx-10 h-full flex flex-col lg:flex-row items-center justify-center'>
           {/* CTA */}
-          <div className='w-[80%] lg:w-[50%] flex flex-col gap-y-[0.9rem]'>
+          <div className='w-[85%] lg:w-[50%] flex flex-col gap-y-[0.9rem]'>
             {/* TITLE */}
             <motion.h1 variants={animateTitle} initial="initial" animate="animate" className='color-main font-sora font-[900] text-[38px] lg:text-[51px] leading-[1em] tracking-[-2px]'>Alucard: The Next Generation Anime Token</motion.h1>
 
